@@ -1,23 +1,34 @@
 {
-    "name": "pixeldev/sulu-block-bundle",
+    "name": "pixelopen/sulu-blockbundle",
     "description": "A Symfony Bundle for Sulu content management platform containing boilerplate blocks",
     "type": "library",
     "require": {
         "php": "^7.4||^8.0",
         "pixeldev/protocol-stream": "^1.0",
+        "sulu/sulu": "2.4.*",
         "symfony/dependency-injection": "^5.0 || ^6.0",
         "symfony/http-kernel": "^5.0 || ^6.0",
         "sulu/web-twig": "^2.5"
     },
-
+    "require-dev": {
+        "dantleech/phpcr-migrations-bundle": "^1.3",
+        "jackalope/jackalope-doctrine-dbal": "^1.3.2",
+        "phpstan/extension-installer": "^1.2",
+        "phpstan/phpstan": "^1.9",
+        "phpstan/phpstan-symfony": "^1.2",
+        "symplify/easy-coding-standard": "^11.1"
+    },
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Pixel\\BlockBundle\\": ""
+            "Pixel\\BlockBundle\\": "src"
         }
     },
     "config": {
-        "sort-packages": true
+        "sort-packages": true,
+        "allow-plugins": {
+            "phpstan/extension-installer": true
+        }
     },
     "scripts": {
         "analyse": "composer-require-checker"
