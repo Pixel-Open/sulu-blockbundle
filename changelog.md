@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.5.8 (10/02/2023)
+
+- Fix sulu version
+
 ## 2.5.7 (10/02/2023)
 
 + Add CI (cs fixer and phpstan)
