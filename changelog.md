@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.5.7 (10/02/2023)
+
++ Add CI (cs fixer and phpstan)
+
 ## 2.5.6 
 
 - Fix code mise en page
