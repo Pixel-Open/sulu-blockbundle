@@ -3,7 +3,7 @@
     "description": "A Symfony Bundle for Sulu content management platform containing boilerplate blocks",
     "type": "library",
     "require": {
-        "php": "^7.4||^8.0",
+        "php": "^8.0",
         "pixeldev/protocol-stream": "^1.0",
         "sulu/sulu": "^2.4",
         "symfony/dependency-injection": "^5.0 || ^6.0",
@@ -27,7 +27,8 @@
     "config": {
         "sort-packages": true,
         "allow-plugins": {
-            "phpstan/extension-installer": true
+            "phpstan/extension-installer": true,
+            "php-http/discovery": false
         }
     },
     "scripts": {
