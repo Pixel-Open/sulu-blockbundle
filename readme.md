@@ -1,6 +1,6 @@
 # Sulu block bundle
 
-A bundle that allows to manage content block for the SUL CMS.
+A bundle that allows to manage content block for the SULU CMS.
 
 It is a fork from the https://github.com/Harborn-digital/sulu-block-bundle project.
 
