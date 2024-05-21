@@ -1,8 +1,8 @@
 # Sulu block bundle
 
-Un bundle qui permet de gérer les blocs de contenu pour le CMS SULU.
+A bundle that allows to manage content block for the SUL CMS.
 
-C'est un fork du projet https://github.com/Harborn-digital/sulu-block-bundle
+It is a fork from the https://github.com/Harborn-digital/sulu-block-bundle project.
 
 ## 1. Installation
 ### Composer
@@ -12,7 +12,7 @@ composer require pixeldev/sulu-block-bundle
 
 ## 2. Usage
 ### Template
-Modification d'un template de page (penser à inclure cet élément xmlns:xi="http://www.w3.org/2001/XInclude")
+Page template modification (mind to include this element: xmlns:xi="http://www.w3.org/2001/XInclude")
 ```xml
 <!-- app/Resources/templates/pages/default.xml -->
 <?xml version="1.0" ?>
@@ -92,7 +92,7 @@ Modification d'un template de page (penser à inclure cet élément xmlns:xi="ht
 </template>
 ```
 ### Twig
-Ajouter les blocs au niveau de Twig
+Add blocks to the Twig
 ```twig
 {% block content %}
     <div vocab='http://schema.org/' typeof='Content'>
@@ -107,13 +107,13 @@ Ajouter les blocs au niveau de Twig
     </div>
 {% endblock %}
 ```
-#### Surcharger les templates Twig
-Créer la structure suivante pour surcharger les blocs via Twig `templates/bundles/PixelBlockBundle`.
-Si vous souhaitez surcharger le bloc suivant `Resources/views/html5/parts/images.html.twig` vous devez créer le fichier suivant `templates/bundles/PixelBlockBundle/html5/parts/images.html.twig`.
+#### Override Twig templates
+Create the following structure to override blocks via Twig `templates/bundles/PixelBlockBundle`.
+If you wish to override the following block `Resources/views/html5/parts/images.html.twig`, you must create the next file : `templates/bundles/PixelBlockBundle/html5/parts/images.html.twig`. 
 
-Et si vous souhaitez uniquement remplacer certains blocs des modèles de ce bundle, vous pouvez étendre le modèle de base en utilisant le namespace `@!Block`.
+And if you only want to replace some of the template blocks in this bundle, you can extend the base template using this namespace `@!Block`. 
 
-Par exemple
+For example
 ```twig
 {# templates/bundles/PixelBlockBundle/html5/parts/images.html.twig #}
 {% extends "@!Block/html5/parts/images.html.twig" %}
@@ -121,22 +121,22 @@ Par exemple
 {% block image_source %}{{ image.thumbnails['50x50'] }}{% endblock %}
 ```
 
-## 3. Blocs disponibles
-- Texte enrichi avec un titre (text)
-- Images avec un titre (images)
-- Images avec un titre et un texte enrichi (image_text)
-- Image, titre avec sous-titre et citation (image_title_subtitle_quote)
-- Vidéo Youtube (youtube)
-- Lien (link)
-- Citation (quote)
-- Avant/Après (image_before_after)
-- Deux colonnes (two_columns)
-- Trois colonnes (three_columns)
+## 3. Available blocks
+- Rich text with a title (text)
+- Images with a title (images)
+- Images with a title and a rich text (image_text)
+- Image, title with sub-title and quote (image_title_subtitle_quote)
+- Youtube video (youtube)
+- Link (link)
+- Quote (quote)
+- Before/After (image_before_after)
+- Twi columns (two_columns)
+- Three columns (three_columns)
 
-## 4. Ajouter des propriétés
-Lorsque vous utilisez un bloc et que vous souhaitez ajouter des propriétés supplémentaires, vous pouvez les configurer séparément dans `config/templates/PixelSuluBlockBundle/properties/{blockname}.xml`.
+## 4. Add properties
+When you use a block and you want to add additional properties, you can configure them separately in `config/templates/PixelSuluBlockBundle/properties/{blockname}.xml`.
 
-Par exemple, si vous souhaitez ajouter une légende au bloc d'images. Vous créeriez le fichier suivant dans votre application client :
+For instance, if you wish to add a caption to the images block, you will create the following fil in you customer application:
 ```xml
 <!-- config/templates/PixelSuluBlockBundle/properties/images.xml -->
 <?xml version='1.0' ?>
@@ -152,11 +152,11 @@ Par exemple, si vous souhaitez ajouter une légende au bloc d'images. Vous crée
 </properties>
 ```
 
-## 5. Surcharge des paramètres des propriétés
+## 5. Override properties parameters
 
-### 5.1 Remplacer complètement tous les paramètres
-Lorsque vous utilisez un bloc et que vous souhaitez choisir vous-même tous les paramètres des propriétés des blocs, vous pouvez les configurer séparément dans `config/templates/PixelSuluBlockBundle/params/{blockname}.xml`.
-Par exemple, si vous souhaitez définir tous les paramètres de la propriété de l'éditeur de texte. Vous créeriez le fichier suivant dans votre application client :
+### 5.1 Completely replace all parameters
+When you use a block and you want to choose youself all the parameters to the blocks properties, you can configure them separately in `config/templates/PixelSuluBlockBundle/params/{blockname}.xml`.
+For example, if you want to define all the text editor property parameters, you will create the following file in you customer application:
 ```xml
 <!-- config/templates/PixelSuluBlockBundle/params/text_editor.xml -->
 <?xml version='1.0' ?>
@@ -171,10 +171,10 @@ Par exemple, si vous souhaitez définir tous les paramètres de la propriété d
 </params>
 ```
 
-### 5.2 Ajuster les paramètres
-Lorsque vous utilisez un bloc et que vous souhaitez modifier les paramètres des propriétés des blocs, vous pouvez les configurer séparément dans `config/templates/PixelSuluBlockBundle/params/{blockname}_adjustments.xml`.
+### 5.2 Adjust parameters
+When you use a block and you wish to edit parameters to the blocks properties, you can configure them in `config/templates/PixelSuluBlockBundle/params/{blockname}_adjustments.xml`.
 
-Par exemple, si vous souhaitez ajuster la hauteur et désactiver la fonctionnalité de tableau de la propriété text_editor. Vous créeriez le fichier suivant dans votre application client:
+For instance, if you want to adjust the height and deactivate the tab feature of the text editor property, you will create the following file in your customer application:
 ```xml
 <!-- config/templates/PixelSuluBlockBundle/params/text_editor_adjustments.xml -->
 <?xml version='1.0' ?>
@@ -187,11 +187,11 @@ Par exemple, si vous souhaitez ajuster la hauteur et désactiver la fonctionnali
 </params>
 ```
 
-### 5.3 Ajouter des paramètres
+### 5.3 Add parameters
 
-Lorsque vous utilisez un bloc et que vous souhaitez ajouter des paramètres aux propriétés des blocs, vous pouvez les configurer séparément dans`config/templates/PixelSuluBlockBundle/params/{blockname}_additions.xml`.
+When you use a block and you want to add parameters to the blocks properties, you can separately configure them in `config/templates/PixelSuluBlockBundle/params/{blockname}_additions.xml`.
 
-Par exemple, si vous souhaitez ajouter le paramètre ui_color à la propriété text_editor. Vous créeriez le fichier suivant dans votre application client :
+For instance, if you wish to add the ui_color parameter to the text_editor property, you will create the following file in your customer application:
 ```xml
 <!-- config/templates/PixelSuluBlockBundle/params/text_editor_additions.xml -->
 <?xml version='1.0' ?>

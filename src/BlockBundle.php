@@ -19,7 +19,6 @@ class BlockBundle extends Bundle
     {
         $rootDirectory = $this->container->get('kernel')->getProjectDir();
         $this->registerStream($rootDirectory);
-        $this->container->get('twig')->getLoader()->addPath($this->getPath() . '/Resources/views', 'sulu-block-bundle');
 
         parent::boot();
     }
