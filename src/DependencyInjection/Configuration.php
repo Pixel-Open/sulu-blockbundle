@@ -9,7 +9,6 @@ class Configuration implements ConfigurationInterface
 {
     public function getConfigTreeBuilder()
     {
-        $treeBuilder = new TreeBuilder('pixel_blockbundle');
-        return $treeBuilder;
+        return new TreeBuilder('pixel_blockbundle');
     }
 }

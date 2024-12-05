@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<type xmlns="http://schemas.sulu.io/template/template"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xmlns:xi="http://www.w3.org/2001/XInclude"
+      xsi:schemaLocation="http://schemas.sulu.io/template/template http://schemas.sulu.io/template/template-1.0.xsd"
+      name="code_html"
+>
+    <meta>
+        <title lang="en">HTML code</title>
+        <title lang="fr">Code HTML</title>
+    </meta>
+    <properties>
+        <property name="htmlCode" type="text_area" mandatory="true">
+            <meta>
+                <title lang="en">HTML code</title>
+                <title lang="fr">Code Html</title>
+            </meta>
+        </property>
+    </properties>
+</type>
