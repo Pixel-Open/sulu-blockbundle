@@ -3,6 +3,8 @@
 ## 2.6.1 (05/12/2024)
 
 + Add html block
++ Update readme
++ Code optimisations
 
 ## 2.6.0 (21/05/2024)
 
