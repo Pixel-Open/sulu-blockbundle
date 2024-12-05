@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.6.1 (05/12/2024)
+
++ Add html block
+
 ## 2.6.0 (21/05/2024)
 
 + Compatible with Sulu 2.6 and Symfony 6

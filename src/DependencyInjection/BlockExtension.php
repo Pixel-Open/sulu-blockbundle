@@ -2,15 +2,10 @@
 
 namespace Pixel\BlockBundle\DependencyInjection;
 
-use Pixel\DirectoryBundle\Admin\CardAdmin;
-use Pixel\DirectoryBundle\Entity\Card;
 use Sulu\Bundle\PersistenceBundle\DependencyInjection\PersistenceExtensionTrait;
-use Sulu\Component\Rest\Exception\EntityNotFoundException;
-use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Extension\Extension;
 use Symfony\Component\DependencyInjection\Extension\PrependExtensionInterface;
-use Symfony\Component\DependencyInjection\Loader;
 
 class BlockExtension extends Extension implements PrependExtensionInterface
 {
