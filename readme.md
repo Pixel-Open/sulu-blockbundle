@@ -7,7 +7,7 @@ It is a fork from the https://github.com/Harborn-digital/sulu-block-bundle proje
 ## 1. Installation
 ### Composer
 ```bash
-composer require pixeldev/sulu-block-bundle
+composer require pixelopen/sulu-block-bundle
 ```
 
 ## 2. Usage
