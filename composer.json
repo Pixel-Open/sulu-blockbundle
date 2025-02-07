@@ -6,8 +6,8 @@
         "php": "^8.0",
         "pixeldev/protocol-stream": "^1.0",
         "sulu/sulu": "^2.5",
-        "symfony/dependency-injection": "^5.0 || ^6.0",
-        "symfony/http-kernel": "^5.0 || ^6.0",
+        "symfony/dependency-injection": "^5.0 || ^6.0 || ^7.0",
+        "symfony/http-kernel": "^5.0 || ^6.0 || ^7.0",
         "sulu/web-twig": "^2.5"
     },
     "require-dev": {
