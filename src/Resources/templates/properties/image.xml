@@ -3,7 +3,6 @@
           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
           xmlns:xi="http://www.w3.org/2001/XInclude"
           xsi:schemaLocation="http://schemas.sulu.io/template/template http://schemas.sulu.io/template/template-1.0.xsd"
-
           name="image"
           type="single_media_selection"
 >
@@ -12,50 +11,31 @@
         <title lang="fr">Image</title>
     </meta>
 
-    <xi:include
-            href='sulu-block-bundle://app-property-params/images.xml'
-            xpointer='xmlns(sulu=http://schemas.sulu.io/template/template) xpointer(/sulu:params)'
-            parse='xml'
-    >
+    <!-- Configuration simplifiée avec fallback consolidé -->
+    <xi:include href='sulu-block-bundle://app-property-params/images.xml'
+                xpointer='xmlns(sulu=http://schemas.sulu.io/template/template) xpointer(/sulu:params)'
+                parse='xml'>
         <xi:fallback>
             <params>
-                <xi:include
-                        href='sulu-block-bundle://app-property-params/images_adjustments.xml'
-                        xpointer='xmlns(sulu=http://schemas.sulu.io/template/template) xpointer(/sulu:params/sulu:param[@name="types"])'
-                        parse='xml'
-                >
+                <!-- Paramètres d'ajustement d'images consolidés -->
+                <xi:include href='sulu-block-bundle://app-property-params/images_config.xml'
+                            parse='xml'>
                     <xi:fallback>
                         <param name="types" value="image"/>
-                    </xi:fallback>
-                </xi:include>
-                <xi:include
-                        href='sulu-block-bundle://app-property-params/images_adjustments.xml'
-                        xpointer='xmlns(sulu=http://schemas.sulu.io/template/template) xpointer(/sulu:params/sulu:param[@name="displayOptions"])'
-                        parse='xml'
-                >
-                    <xi:fallback>
                         <param name="displayOptions" type="collection">
                             <param name="top" value="true"/>
                             <param name="right" value="true"/>
                             <param name="left" value="true"/>
                             <param name="bottom" value="true"/>
                         </param>
-                    </xi:fallback>
-                </xi:include>
-                <xi:include
-                        href='sulu-block-bundle://app-property-params/images_adjustments.xml'
-                        xpointer='xmlns(sulu=http://schemas.sulu.io/template/template) xpointer(/sulu:params/sulu:param[@name="defaultDisplayOption"])'
-                        parse='xml'
-                >
-                    <xi:fallback>
                         <param name="defaultDisplayOption" value="top"/>
                     </xi:fallback>
                 </xi:include>
-                <xi:include
-                        href='sulu-block-bundle://app-property-params/images_additions.xml'
-                        xpointer='xmlns(sulu=http://schemas.sulu.io/template/template) xpointer(/sulu:params/sulu:param)'
-                        parse='xml'
-                >
+
+
+                <xi:include href='sulu-block-bundle://app-property-params/images_additions.xml'
+                            xpointer='xmlns(sulu=http://schemas.sulu.io/template/template) xpointer(/sulu:params/sulu:param)'
+                            parse='xml'>
                     <xi:fallback/>
                 </xi:include>
             </params>

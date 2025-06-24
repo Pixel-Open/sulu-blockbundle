@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<params xmlns="http://schemas.sulu.io/template/template">
+    <param name="types" value="image"/>
+    <param name="displayOptions" type="collection">
+        <param name="top" value="true"/>
+        <param name="right" value="true"/>
+        <param name="left" value="true"/>
+        <param name="bottom" value="true"/>
+    </param>
+    <param name="defaultDisplayOption" value="top"/>
+</params>
