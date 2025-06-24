@@ -3,7 +3,6 @@
           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
           xmlns:xi="http://www.w3.org/2001/XInclude"
           xsi:schemaLocation="http://schemas.sulu.io/template/template http://schemas.sulu.io/template/template-1.0.xsd"
-
           name="text"
           type="text_editor"
 >
@@ -19,61 +18,13 @@
     >
         <xi:fallback>
             <params>
-                <xi:include
-                        href='sulu-block-bundle://app-property-params/text_editor_adjustments.xml'
-                        xpointer='xmlns(sulu=http://schemas.sulu.io/template/template) xpointer(/sulu:params/sulu:param[@name="table"])'
-                        parse='xml'
-                >
-                    <xi:fallback>
-                        <param name="table" value="true"/>
-                    </xi:fallback>
-                </xi:include>
-                <xi:include
-                        href='sulu-block-bundle://app-property-params/text_editor_adjustments.xml'
-                        xpointer='xmlns(sulu=http://schemas.sulu.io/template/template) xpointer(/sulu:params/sulu:param[@name="link"])'
-                        parse='xml'
-                >
-                    <xi:fallback>
-                        <param name="link" value="true"/>
-                    </xi:fallback>
-                </xi:include>
-                <xi:include
-                        href='sulu-block-bundle://app-property-params/text_editor_adjustments.xml'
-                        xpointer='xmlns(sulu=http://schemas.sulu.io/template/template) xpointer(/sulu:params/sulu:param[@name="paste_from_word"])'
-                        parse='xml'
-                >
-                    <xi:fallback>
-                        <param name="paste_from_word" value="true"/>
-                    </xi:fallback>
-                </xi:include>
-                <xi:include
-                        href='sulu-block-bundle://app-property-params/text_editor_adjustments.xml'
-                        xpointer='xmlns(sulu=http://schemas.sulu.io/template/template) xpointer(/sulu:params/sulu:param[@name="height"])'
-                        parse='xml'
-                >
-                    <xi:fallback>
-                        <param name="height" value="100"/>
-                    </xi:fallback>
-                </xi:include>
-                <xi:include
-                        href='sulu-block-bundle://app-property-params/text_editor_adjustments.xml'
-                        xpointer='xmlns(sulu=http://schemas.sulu.io/template/template) xpointer(/sulu:params/sulu:param[@name="max_height"])'
-                        parse='xml'
-                >
-                    <xi:fallback>
-                        <param name="max_height" value="200"/>
-                    </xi:fallback>
-                </xi:include>
-                <xi:include
-                        href='sulu-block-bundle://app-property-params/text_editor_adjustments.xml'
-                        xpointer='xmlns(sulu=http://schemas.sulu.io/template/template) xpointer(/sulu:params/sulu:param[@name="extra_allowed_content"])'
-                        parse='xml'
-                >
-                    <xi:fallback>
-                        <param name="extra_allowed_content"
-                               value="img(*)[*]; span(*)[*]; div(*)[*]; iframe(*)[*]; script(*)[*]"/>
-                    </xi:fallback>
-                </xi:include>
+                <param name="table" value="true"/>
+                <param name="link" value="true"/>
+                <param name="paste_from_word" value="true"/>
+                <param name="height" value="100"/>
+                <param name="max_height" value="200"/>
+                <param name="extra_allowed_content" value="img(*)[*]; span(*)[*]; div(*)[*]; iframe(*)[*]; script(*)[*]"/>
+
                 <xi:include
                         href='sulu-block-bundle://app-property-params/text_editor_additions.xml'
                         xpointer='xmlns(sulu=http://schemas.sulu.io/template/template) xpointer(/sulu:params/sulu:param)'
