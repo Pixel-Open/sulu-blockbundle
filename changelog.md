@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.6.4 (18/09/2025)
+
++ Symfony 7 compatibility #1
+
 ## 2.6.3 (18/09/2025)
 
 + Add single file block
