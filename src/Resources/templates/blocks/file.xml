@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<type xmlns="http://schemas.sulu.io/template/template"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xmlns:xi="http://www.w3.org/2001/XInclude"
+      xsi:schemaLocation="http://schemas.sulu.io/template/template http://schemas.sulu.io/template/template-1.0.xsd"
+      name="file_block">
+    <meta>
+        <title lang="en">File Block</title>
+        <title lang="fr">Bloc Fichier</title>
+    </meta>
+    <properties>
+        <xi:include href='sulu-block-bundle://properties/title.xml'/>
+        <xi:include href='sulu-block-bundle://properties/file.xml'/>
+    </properties>
+</type>
