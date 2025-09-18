@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.6.3 (18/09/2025)
+
++ Add single file block
++ Code optimisations
+
 ## 2.6.2 (24/06/2025)
 
 + Add single image block with link
