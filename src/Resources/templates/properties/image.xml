@@ -10,14 +10,11 @@
         <title lang="en">Image</title>
         <title lang="fr">Image</title>
     </meta>
-
-    <!-- Configuration simplifiée avec fallback consolidé -->
     <xi:include href='sulu-block-bundle://app-property-params/images.xml'
                 xpointer='xmlns(sulu=http://schemas.sulu.io/template/template) xpointer(/sulu:params)'
                 parse='xml'>
         <xi:fallback>
             <params>
-                <!-- Paramètres d'ajustement d'images consolidés -->
                 <xi:include href='sulu-block-bundle://app-property-params/images_config.xml'
                             parse='xml'>
                     <xi:fallback>
