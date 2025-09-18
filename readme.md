@@ -1,6 +1,6 @@
 # Sulu block bundle
 
-[![Minimum PHP Version](https://img.shields.io/badge/php-%3E%3D%208.0-green)](https://php.net/)
+[![Minimum PHP Version](https://img.shields.io/badge/php-%3E%3D%208.1-green)](https://php.net/)
 [![Minimum Sulu Version](https://img.shields.io/badge/sulu-%3E%3D%202.5-green)](https://symfony.com)
 [![GitHub release](https://img.shields.io/github/v/release/Pixel-Open/sulu-blockbundle)](https://github.com/Pixel-Open/sulu-blockbundle/releases)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=Pixel-Open_sulu-blockbundle&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=Pixel-Open_sulu-blockbundle)

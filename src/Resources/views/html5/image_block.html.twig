@@ -1,0 +1,20 @@
+{% extends '@Block/html5/base.html.twig' %}
+{% block section_content %}
+    {% set hasLink = block['image_link'] is defined and block['image_link'] is not empty %}
+    {% set linkUrl = hasLink ? block['image_link'] : '' %}
+    {% set isClickable = hasLink %}
+    {% set openInNewTab = block['open_in_new_tab'] is defined and block['open_in_new_tab'] %}
+
+    {% set commonAttributes %}class="" {% include('@Block/html5/animation.html.twig') %}{% endset %}
+    {% set tagName = isClickable ? 'a' : 'div' %}
+    {% set linkAttributes = isClickable ? 'href=' ~ linkUrl ~ '' : '' %}
+    {% set targetAttributes = (isClickable and openInNewTab) ? 'target="_blank" rel="noopener noreferrer"' : '' %}
+
+    <{{ tagName }} {{ linkAttributes }} {{ targetAttributes }} {{ commonAttributes }}>
+    <figure>
+        {% block image %}
+            {% include '@Block/html5/parts/image.html.twig' %}
+        {% endblock %}
+    </figure>
+    </{{ tagName }}>
+{% endblock %}

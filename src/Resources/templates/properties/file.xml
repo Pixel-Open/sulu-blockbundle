@@ -3,14 +3,14 @@
           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
           xmlns:xi="http://www.w3.org/2001/XInclude"
           xsi:schemaLocation="http://schemas.sulu.io/template/template http://schemas.sulu.io/template/template-1.0.xsd"
-          name="image"
+          name="file"
           type="single_media_selection"
 >
     <meta>
-        <title lang="en">Image</title>
-        <title lang="fr">Image</title>
+        <title lang="en">File</title>
+        <title lang="fr">Fichier</title>
     </meta>
-    <xi:include href='sulu-block-bundle://app-property-params/images.xml'
+    <xi:include href='sulu-block-bundle://app-property-params/file.xml'
                 xpointer='xmlns(sulu=http://schemas.sulu.io/template/template) xpointer(/sulu:params)'
                 parse='xml'>
         <xi:fallback>
@@ -18,18 +18,9 @@
                 <xi:include href='sulu-block-bundle://app-property-params/images_config.xml'
                             parse='xml'>
                     <xi:fallback>
-                        <param name="types" value="image"/>
-                        <param name="displayOptions" type="collection">
-                            <param name="top" value="true"/>
-                            <param name="right" value="true"/>
-                            <param name="left" value="true"/>
-                            <param name="bottom" value="true"/>
-                        </param>
-                        <param name="defaultDisplayOption" value="top"/>
+                        <param name="types" value="document"/>
                     </xi:fallback>
                 </xi:include>
-
-
                 <xi:include href='sulu-block-bundle://app-property-params/images_additions.xml'
                             xpointer='xmlns(sulu=http://schemas.sulu.io/template/template) xpointer(/sulu:params/sulu:param)'
                             parse='xml'>

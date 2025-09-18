@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<type xmlns="http://schemas.sulu.io/template/template"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xmlns:xi="http://www.w3.org/2001/XInclude"
+      xsi:schemaLocation="http://schemas.sulu.io/template/template http://schemas.sulu.io/template/template-1.0.xsd"
+      name="image_block">
+    <meta>
+        <title lang="en">Image Block</title>
+        <title lang="fr">Bloc Image</title>
+    </meta>
+    <properties>
+        <property name="image" type="single_media_selection" mandatory="true">
+            <meta>
+                <title lang="en">Image</title>
+                <title lang="fr">Image</title>
+                <info_text lang="en">Select an image to display in this block</info_text>
+                <info_text lang="fr">Sélectionnez une image à afficher dans ce bloc</info_text>
+            </meta>
+            <params>
+                <param name="types" value="image"/>
+            </params>
+        </property>
+        <property name="image_link" type="url">
+            <meta>
+                <title lang="en">Image Link</title>
+                <title lang="fr">Lien de l'image</title>
+                <info_text lang="en">Optional link when image is clicked</info_text>
+                <info_text lang="fr">Lien optionnel lors du clic sur l'image</info_text>
+            </meta>
+            <params>
+                <param name="defaults" type="collection">
+                    <param name="scheme" value="https://"/>
+                </param>
+            </params>
+        </property>
+
+        <property name="open_in_new_tab" type="checkbox">
+            <meta>
+                <title lang="en">Open link in new tab</title>
+                <title lang="fr">Ouvrir le lien dans un nouvel onglet</title>
+            </meta>
+            <params>
+                <param name="type" value="toggler"/>
+                <param name="label" value=""/>
+            </params>
+        </property>
+    </properties>
+</type>
