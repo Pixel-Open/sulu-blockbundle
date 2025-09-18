@@ -1,0 +1,46 @@
+{% if block['file'] is defined and block['file'] is not empty %}
+    {% set file = sulu_resolve_media(block['file'], app.request.locale) %}
+    {% if file %}
+        <div class="file-block-item">
+            <a href="{{ file.url }}"
+               class="file-download-link"
+               download="{{ file.name }}"
+               target="_blank"
+               rel="noopener noreferrer">
+                <span class="file-download-icon">
+                    <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                    </svg>
+                </span>
+                <span class="file-details">
+                    <span class="file-title">
+                        {% if block['title'] is defined and block['title'] is not empty %}
+                            {{ block['title'] }}
+                        {% else %}
+                            {{ file.title|default(file.name) }}
+                        {% endif %}
+                    </span>
+                    {% if file.size %}
+                        <span class="file-meta">
+                            {% set size = file.size %}
+                            <span class="file-size">
+                                {% if size < 1024 %}
+                                    {{ size }} octets
+                                {% elseif size < 1048576 %}
+                                    {{ (size / 1024)|round(1) }} Ko
+                                {% elseif size < 1073741824 %}
+                                    {{ (size / 1048576)|round(1) }} Mo
+                                {% else %}
+                                    {{ (size / 1073741824)|round(1) }} Go
+                                {% endif %}
+                            </span>
+                            {% if file.extension %}
+                                <span class="file-extension">{{ file.extension|upper }}</span>
+                            {% endif %}
+                        </span>
+                    {% endif %}
+                </span>
+            </a>
+        </div>
+    {% endif %}
+{% endif %}

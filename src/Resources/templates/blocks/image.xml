@@ -20,7 +20,6 @@
                 <param name="types" value="image"/>
             </params>
         </property>
-
         <property name="image_link" type="url">
             <meta>
                 <title lang="en">Image Link</title>
