@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.6.5 (03/10/2025)
+
+- Fix file block
+
 ## 2.6.4 (18/09/2025)
 
 + Symfony 7 compatibility #1
