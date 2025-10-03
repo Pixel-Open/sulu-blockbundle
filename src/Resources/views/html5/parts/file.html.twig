@@ -1,5 +1,6 @@
 {% if block['file'] is defined and block['file'] is not empty %}
-    {% set file = sulu_resolve_media(block['file'], app.request.locale) %}
+    {% set fileId = block['file']['id']|default(block['file']) %}
+    {% set file = sulu_resolve_media(fileId, app.request.locale) %}
     {% if file %}
         <div class="file-block-item">
             <a href="{{ file.url }}"
